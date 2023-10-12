@@ -1,5 +1,5 @@
 const router = require("express").Router();
-
-//TODO add endpoints
+const homeController = require("./controllers/homeController");
+router.use(homeController);
 
 module.exports = router;

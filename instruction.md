@@ -11,7 +11,9 @@
    -configure view engine
    -add main layout
    -fix public styles hyperlinks
-   -render homepage in hbs 
-   7. Trim html files and convert them into hbs
+   -render homepage in hbs 7. Trim html files and convert them into hbs
    -group views into separate folders based on their functions
-   8. Create controller folder with home controller
+7. Create controller folder with home controller
+8. Add database
+   -install mongoose
+   -connect to db
