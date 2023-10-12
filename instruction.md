@@ -11,9 +11,20 @@
    -configure view engine
    -add main layout
    -fix public styles hyperlinks
-   -render homepage in hbs 7. Trim html files and convert them into hbs
+   -render homepage in hbs
+7. Trim html files and convert them into hbs
    -group views into separate folders based on their functions
-7. Create controller folder with home controller
-8. Add database
+8. Create controller folder with home controller
+9. Add database
    -install mongoose
    -connect to db
+10. Prepare user functionality
+    -user controller
+    -add controller to routes
+    -fix navigations in the nav bar(login,register etc.)
+    -render login page
+    -render register page
+11. Add User model
+    -simple validation in Schema
+    -add method for register
+    -create first User record in db
