@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const creatureService = require("../services/creatureService");
 const { isAuth } = require("../middlewares/authMiddleware");
+const { extractErrorMsgs } = require("../utils/errorHandler");
+
 router.get("/all", async (req, res) => {
   const creatures = await creatureService.getAll().lean();
   res.render("post/all-posts", { creatures });
@@ -22,10 +24,13 @@ router.post("/create", async (req, res) => {
     description,
     owner: req.user,
   };
-  //add user
 
-  await creatureService.create(payload);
-  res.redirect("/posts/all");
+  try {
+    await creatureService.create(payload);
+  } catch (error) {
+    const errorMessages = extractErrorMsgs(error);
+    res.status(404).render("post/create", { errorMessages });
+  }
 });
 
 router.get("/profile", isAuth, async (req, res) => {

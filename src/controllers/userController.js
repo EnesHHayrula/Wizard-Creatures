@@ -10,7 +10,7 @@ router.post("/register", async (req, res) => {
   const { firstName, lastName, email, password, repeatPassword } = req.body;
 
   try {
-    await userService.register({
+    const token = await userService.register({
       firstName,
       lastName,
       email,
