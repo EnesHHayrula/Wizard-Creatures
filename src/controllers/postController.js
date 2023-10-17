@@ -27,6 +27,7 @@ router.post("/create", async (req, res) => {
 
   try {
     await creatureService.create(payload);
+    res.redirect("/posts/all");
   } catch (error) {
     const errorMessages = extractErrorMsgs(error);
     res.status(404).render("post/create", { errorMessages });

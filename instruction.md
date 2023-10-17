@@ -84,10 +84,6 @@
 
 21. Automatically login after register //
 
--------------------------------------------------------
-
-// TODO
-
 22. Map pages to navigation in both Logged in and Logged Out state
 
 23. Add creature model to mongoose
